@@ -1,0 +1,16 @@
+a,X
+s,P
+q,K
+t,Y
+j,O
+x,F
+w,I
+k,N
+p,H
+v,C
+o,G
+n,U
+u,R
+c,W
+l,B
+g,Z
