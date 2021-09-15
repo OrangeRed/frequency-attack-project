@@ -18,7 +18,7 @@ def get_eng_freq_list(file):
   return sorted_char_list
 
 
-# Create a character frequency list from all of the characters inside of some input text
+# Create a character frequency list from all of the characters inside of the input text
 def get_input_freq_list(file):
   input_file = open(file, 'r')
   char_list = {}
@@ -62,7 +62,7 @@ def import_char_equiv_list(file):
 # Primative frequency attack that blindly swaps characters in the input text based on frequency
 def bad_freq_attack(file, mapping):
   input_file = open(file, 'r')
-  output_file = open("./bad_freq_attack.txt", "w")
+  output_file = open("./results/bad_freq_attack.txt", "w")
 
   for line in input_file:
     for char in line:
@@ -78,7 +78,7 @@ def bad_freq_attack(file, mapping):
 # Better frequency attack that checks user made character equivalence list before swapping based on frequency
 def better_freq_attack(file, mapping, imported_mapping):
   input_file = open(file, 'r')
-  output_file = open("./better_freq_attack.txt", "w")
+  output_file = open("./results/better_freq_attack.txt", "w")
 
   for line in input_file:
     for char in line:
@@ -96,8 +96,8 @@ def better_freq_attack(file, mapping, imported_mapping):
 # Main method to run frequency attack
 def decipher():
   input_file = "./input.txt"
-  eng_freq_list_file = "./eng_freq_list.txt"
-  equiv_list_file = './character_equiv_list.txt'
+  eng_freq_list_file = "./tools/eng_freq_list.txt"
+  equiv_list_file = './tools/my_character_equiv_list.txt'
 
   input_freq_list = get_input_freq_list(input_file)
   eng_freq_list = get_eng_freq_list(eng_freq_list_file)
